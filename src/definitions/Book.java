@@ -11,6 +11,24 @@ public class Book {
     private String bookAuthor;
     private String bookISBNNumber;
 
+    public Book() {
+        bookName = "Java A Beginner’s Guide, Eighth Edition";
+        bookAuthor = "Herbert Schildt";
+        bookISBNNumber = "1258_451_611_156";
+    }
+
+    public Book(String bookName, String bookAuthor, String bookISBNNumber) {
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthor;
+        this.bookISBNNumber = bookISBNNumber;
+    }
+
+    public Book(String bookName) {
+        this.bookName = bookName;
+        this.bookAuthor = "Antti Laaksonen";
+        this.bookISBNNumber = "1455_546_656_656";
+    }
+
     /**
      * This method returns the name of the book.
      *
@@ -38,6 +56,7 @@ public class Book {
      * @return The author of the book.
      */
     public String getBookAuthor() {
+
         return bookAuthor;
     }
 
@@ -46,8 +65,8 @@ public class Book {
      *
      * @param bookAuthor The name of the book.
      */
-
     public void setBookAuthor(String bookAuthor) {
+
         this.bookAuthor = bookAuthor;
     }
 
@@ -56,8 +75,8 @@ public class Book {
      *
      * @return The ISBN number of the book.
      */
-
     public String getBookISBNNumber() {
+
         return bookISBNNumber;
     }
 
@@ -66,8 +85,8 @@ public class Book {
      *
      * @param bookISBNNumber The name of the book.
      */
-
     public void setBookISBNNumber(String bookISBNNumber) {
+
         this.bookISBNNumber = bookISBNNumber;
     }
 
