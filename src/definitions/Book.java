@@ -90,4 +90,12 @@ public class Book {
         this.bookISBNNumber = bookISBNNumber;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookISBNNumber='" + bookISBNNumber + '\'' +
+                '}';
+    }
 }
