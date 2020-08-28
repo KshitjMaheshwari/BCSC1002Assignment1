@@ -11,22 +11,44 @@ public class Student {
     private String middleName;
     private String lastName;
     private long rollNumber;
-    private int booksIssued;
-    private Book[] bookNames;
+    private int numberOfBooksIssued;
+    private Book[] booksNameIssuedByStudent;
+
+    public Student() {
+        firstName = "Not Available";
+        numberOfBooksIssued = 3;
+        booksNameIssuedByStudent = new Book[numberOfBooksIssued];
+        for (int index = 0; index < numberOfBooksIssued; index++) {
+            booksNameIssuedByStudent[index] = new Book();
+        }
+    }
+
+    public Student(String firstName, String middleName, String lastName, long rollNumber, int numberOfBooksIssued, Book[] booksNameIssuedByStudent) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.rollNumber = rollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        this.booksNameIssuedByStudent = booksNameIssuedByStudent;
+    }
 
     public String getFirstName() {
+
         return firstName;
     }
 
     public void setFirstName(String firstName) {
+
         this.firstName = firstName;
     }
 
     public String getMiddleName() {
+
         return middleName;
     }
 
     public void setMiddleName(String middleName) {
+
         this.middleName = middleName;
     }
 
@@ -46,19 +68,20 @@ public class Student {
         this.rollNumber = rollNumber;
     }
 
-    public int getBooksIssued() {
-        return booksIssued;
+    public int getNumberOfBooksIssued() {
+        return numberOfBooksIssued;
     }
 
-    public void setBooksIssued(int booksIssued) {
-        this.booksIssued = booksIssued;
+    public void setNumberOfBooksIssued(int booksIssued) {
+        this.numberOfBooksIssued = booksIssued;
     }
 
-    public Book[] getBookNames() {
-        return bookNames;
+    public Book[] getBooksNameIssuedByStudent() {
+        return booksNameIssuedByStudent;
     }
 
-    public void setBookNames(Book[] bookNames) {
-        this.bookNames = bookNames;
+    public void setBooksNameIssuedByStudent(Book[] booksNameIssuedByStudent) {
+        this.booksNameIssuedByStudent = booksNameIssuedByStudent;
     }
+
 }
