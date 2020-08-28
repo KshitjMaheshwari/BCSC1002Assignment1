@@ -8,4 +8,12 @@ package definitions;
 
 public class Library {
     private Book[] currentlyAvailableBooks;
+
+    public Book[] getCurrentlyAvailableBooks() {
+        return currentlyAvailableBooks.clone();
+    }
+
+    public void setCurrentlyAvailableBooks(Book[] currentlyAvailableBooks) {
+        this.currentlyAvailableBooks = currentlyAvailableBooks;
+    }
 }
