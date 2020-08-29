@@ -31,21 +31,10 @@ public class Book {
         this.bookISBNNumber = "1455_546_656_656";
     }
 
-    /**
-     * This method returns the name of the book.
-     *
-     * @return The name of the book.
-     */
     public String getBookName() {
 
         return bookName;
     }
-
-    /**
-     * This method sets the name of the book.
-     *
-     * @param bookName The name of the book.
-     */
 
     public void setBookName(String bookName) {
 
