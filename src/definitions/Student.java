@@ -135,7 +135,9 @@ public class Student {
      **/
     public void doReturn(int numberOfBooksIssued) {
         if (this.numberOfBooksIssued == numberOfBooksIssued) {
-            System.out.println("All the books get returned.");
+            System.out.println("The books get returned.");
+        } else {
+            System.out.println("Not all books  were returned.");
         }
     }
 
