@@ -19,7 +19,7 @@ public class Student {
 
     public Student() {
         firstName = "Not Available";
-        numberOfBooksIssued = 3;
+        numberOfBooksIssued = 1;
         booksNameIssuedByStudent = new Book[numberOfBooksIssued];
         for (int index = 0; index < numberOfBooksIssued; index++) {
             booksNameIssuedByStudent[index] = new Book();
@@ -89,13 +89,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student{ " + "\n" +
                 "firstName='" + firstName + '\'' +
                 ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", rollNumber=" + rollNumber +
-                ", numberOfBooksIssued=" + numberOfBooksIssued +
-                ", booksNameIssuedByStudent=" + Arrays.toString(booksNameIssuedByStudent) +
+                ", lastName='" + lastName + '\'' + "\n" +
+                "rollNumber=" + rollNumber + "\n" +
+                "numberOfBooksIssued= " + numberOfBooksIssued + "\n" +
+                "booksNameIssuedByStudent=" + Arrays.toString(booksNameIssuedByStudent) +
                 '}';
     }
 
@@ -118,4 +118,25 @@ public class Student {
         result = 31 * result + Arrays.hashCode(booksNameIssuedByStudent);
         return result;
     }
+
+    /**
+     * This method prints the all books issued by student.
+     */
+    public void printAllBooksIssuedByStudent() {
+        for (Book bookName : booksNameIssuedByStudent) {
+            System.out.println(bookName);
+        }
+    }
+
+    /**
+     * This method prints the whether the books were returned or not.
+     *
+     * @param numberOfBooksIssued the number of books which were issued.
+     **/
+    public void doReturn(int numberOfBooksIssued) {
+        if (this.numberOfBooksIssued == numberOfBooksIssued) {
+            System.out.println("All the books get returned.");
+        }
+    }
+
 }
