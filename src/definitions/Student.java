@@ -134,10 +134,8 @@ public class Student {
      * @param numberOfBooksIssued the number of books which were issued.
      **/
     public void doReturn(int numberOfBooksIssued) {
-        if (this.numberOfBooksIssued == numberOfBooksIssued) {
+        if (this.numberOfBooksIssued <= numberOfBooksIssued) {
             System.out.println("The books get returned.");
-        } else {
-            System.out.println("Not all books  were returned.");
         }
     }
 
